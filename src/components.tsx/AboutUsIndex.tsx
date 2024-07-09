@@ -1,8 +1,8 @@
-import { Box, Typography, Grid, IconButton } from "@mui/material";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { Box, Grid, IconButton, Typography } from "@mui/material";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function AboutUsIndex() {
@@ -29,7 +29,7 @@ export default function AboutUsIndex() {
     <Box
       ref={ref}
       sx={{
-        height: "100vh", // Adjust height as needed
+        height: "100vh",
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -37,7 +37,7 @@ export default function AboutUsIndex() {
         alignItems: "center",
         color: "white",
         textAlign: "center",
-        background: "linear-gradient(135deg, #254336 0%, #6B8A7A 100%)", // Match the color palette
+        background: "linear-gradient(135deg, #254336 0%, #6B8A7A 100%)",
         padding: 4,
         position: "relative",
         overflow: "hidden",
@@ -51,7 +51,7 @@ export default function AboutUsIndex() {
           width: "100%",
           height: "100%",
           zIndex: -1,
-          backgroundImage: `url("https://i.imgur.com/kKyCoTP.png")`, // Background image URL
+          backgroundImage: `url("https://i.imgur.com/kKyCoTP.png")`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

@@ -58,8 +58,8 @@ export default function Index() {
           justifyContent: "center",
           alignItems: "center",
           height: "100vh",
-          backgroundColor: "#254336", // Mörkgrön bakgrund
-          color: "#DAD3BE", // Beige textfärg
+          backgroundColor: "#254336", 
+          color: "#DAD3BE", 
           margin: 0,
           width: "100%",
           textAlign: "center",
@@ -72,7 +72,7 @@ export default function Index() {
             fontWeight: "bold",
             letterSpacing: 5,
             fontFamily: "'Montserrat', sans-serif",
-            color: "#DAD3BE", // Beige text
+            color: "#DAD3BE", 
           }}
         >
           BlomsterGlädje

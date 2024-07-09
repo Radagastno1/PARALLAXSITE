@@ -1,4 +1,10 @@
-import { Box, Button, Typography, Grid } from "@mui/material";
+import {
+  faLeaf,
+  faShoppingCart,
+  faTruck,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, Button, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -30,7 +36,7 @@ export default function WebsitePresentation() {
         minHeight: "100vh",
         textAlign: "center",
         overflow: "hidden",
-        background: "linear-gradient(135deg, #254336 0%, #6B8A7A 100%)", // Använder den föreslagna färgpaletten för bakgrund
+        background: "linear-gradient(135deg, #DAD3BE 0%, #DAD3BE 100%)",
         padding: 4,
       }}
     >
@@ -41,12 +47,10 @@ export default function WebsitePresentation() {
           left: 0,
           width: "100%",
           height: "100vh",
-          backgroundImage: `url("https://i.imgur.com/kKyCoTP.png")`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          zIndex: -1,
           filter: "brightness(0.5)",
         }}
       />
@@ -67,9 +71,8 @@ export default function WebsitePresentation() {
             width: "100%",
             maxWidth: "800px",
             padding: 4,
-            zIndex: 2,
             textAlign: "left",
-            color: "#DAD3BE", // Använder den ljusare beige färgen för text
+            color: "#254336",
           }}
         >
           <AnimatedBox>
@@ -78,9 +81,10 @@ export default function WebsitePresentation() {
                 fontSize: { xs: 24, md: 40 },
                 marginBottom: 2,
                 letterSpacing: 2,
-                color: "#DAD3BE", // Använder den ljusare beige färgen för text
+                color: "#254336",
               }}
             >
+              <FontAwesomeIcon icon={faLeaf} style={{ marginRight: 8 }} />
               Blomsterarrangemang
             </Typography>
           </AnimatedBox>
@@ -94,26 +98,24 @@ export default function WebsitePresentation() {
                 gap: 1,
               }}
             >
-              <Typography sx={{ color: "#DAD3BE" }}>
-                Bröllopsblommor{" "}
-              </Typography>
-              <Typography sx={{ color: "#DAD3BE" }}>
+              <Typography sx={{ color: "#254336" }}>Bröllopsblommor</Typography>
+              <Typography sx={{ color: "#254336" }}>
                 Begravningsarrangemang
               </Typography>
-              <Typography sx={{ color: "#DAD3BE" }}>
+              <Typography sx={{ color: "#254336" }}>
                 Fest- och eventblommor
               </Typography>
-              <Typography sx={{ color: "#DAD3BE" }}>
+              <Typography sx={{ color: "#254336" }}>
                 Färdiga buketter
               </Typography>
             </Box>
           </AnimatedBox>
           <Button
             sx={{
-              backgroundColor: "#B7B597", // Använder den beige-gröna färgen för knappar
-              color: "#254336", // Använder den mörkgröna färgen för text på knappar
+              backgroundColor: "#EDE9DC",
+              color: "#6B8A7A",
               "&:hover": {
-                backgroundColor: "#DAD3BE", // Ljusare färg vid hover
+                backgroundColor: "#DAD3BE",
               },
             }}
             variant="contained"
@@ -128,9 +130,8 @@ export default function WebsitePresentation() {
             width: "100%",
             maxWidth: "800px",
             padding: 4,
-            zIndex: 2,
             textAlign: "left",
-            color: "#DAD3BE", // Använder den ljusare beige färgen för text
+            color: "#254336",
           }}
         >
           <AnimatedBox>
@@ -139,9 +140,13 @@ export default function WebsitePresentation() {
                 fontSize: { xs: 24, md: 40 },
                 marginBottom: 2,
                 letterSpacing: 2,
-                color: "#DAD3BE", // Använder den ljusare beige färgen för text
+                color: "#254336",
               }}
             >
+              <FontAwesomeIcon
+                icon={faShoppingCart}
+                style={{ marginRight: 8 }}
+              />
               Växtförsäljning
             </Typography>
           </AnimatedBox>
@@ -155,19 +160,19 @@ export default function WebsitePresentation() {
                 gap: 1,
               }}
             >
-              <Typography sx={{ color: "#DAD3BE" }}>Inomhusväxter</Typography>
-              <Typography sx={{ color: "#DAD3BE" }}>Utomhusväxter</Typography>
-              <Typography sx={{ color: "#DAD3BE" }}>
+              <Typography sx={{ color: "#254336" }}>Inomhusväxter</Typography>
+              <Typography sx={{ color: "#254336" }}>Utomhusväxter</Typography>
+              <Typography sx={{ color: "#254336" }}>
                 Krukor och planteringskärl
               </Typography>
             </Box>
           </AnimatedBox>
           <Button
             sx={{
-              backgroundColor: "#B7B597", // Använder den beige-gröna färgen för knappar
-              color: "#254336", // Använder den mörkgröna färgen för text på knappar
+              backgroundColor: "#EDE9DC",
+              color: "#254336",
               "&:hover": {
-                backgroundColor: "#DAD3BE", // Ljusare färg vid hover
+                backgroundColor: "#DAD3BE",
               },
             }}
             variant="contained"
@@ -182,9 +187,8 @@ export default function WebsitePresentation() {
             width: "100%",
             maxWidth: "800px",
             padding: 4,
-            zIndex: 2,
             textAlign: "left",
-            color: "#DAD3BE", // Använder den ljusare beige färgen för text
+            color: "#254336",
           }}
         >
           <AnimatedBox>
@@ -193,9 +197,10 @@ export default function WebsitePresentation() {
                 fontSize: { xs: 24, md: 40 },
                 marginBottom: 2,
                 letterSpacing: 2,
-                color: "#DAD3BE", // Använder den ljusare beige färgen för text
+                color: "#254336",
               }}
             >
+              <FontAwesomeIcon icon={faTruck} style={{ marginRight: 8 }} />
               Leveranser
             </Typography>
           </AnimatedBox>
@@ -209,23 +214,23 @@ export default function WebsitePresentation() {
                 gap: 1,
               }}
             >
-              <Typography sx={{ color: "#DAD3BE" }}>
+              <Typography sx={{ color: "#254336" }}>
                 Hemleverans inom Stockholm
               </Typography>
-              <Typography sx={{ color: "#DAD3BE" }}>
+              <Typography sx={{ color: "#254336" }}>
                 Expressleverans samma dag
               </Typography>
-              <Typography sx={{ color: "#DAD3BE" }}>
+              <Typography sx={{ color: "#254336" }}>
                 Blomsterabonnemang för regelbunden leverans
               </Typography>
             </Box>
           </AnimatedBox>
           <Button
             sx={{
-              backgroundColor: "#B7B597", // Använder den beige-gröna färgen för knappar
-              color: "#254336", // Använder den mörkgröna färgen för text på knappar
+              backgroundColor: "#EDE9DC",
+              color: "#254336",
               "&:hover": {
-                backgroundColor: "#DAD3BE", // Ljusare färg vid hover
+                backgroundColor: "#DAD3BE",
               },
             }}
             variant="contained"

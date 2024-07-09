@@ -95,7 +95,7 @@ export default function MenuSection() {
             fontWeight: "bold",
             marginBottom: 4,
             fontFamily: "'Montserrat', sans-serif",
-            color: "#2E8B57", // Mörkgrön text
+            color: "#2E8B57",
           }}
         >
           Välkommen till BlomsterGlädje
@@ -105,13 +105,13 @@ export default function MenuSection() {
             <Button
               variant="contained"
               sx={{
-                backgroundColor: "#B2D8B2", // Ljusgrön knapp
-                color: "#2E8B57", // Mörkgrön text
+                backgroundColor: "#B2D8B2",
+                color: "#2E8B57",
                 fontFamily: "'Montserrat', sans-serif",
                 fontWeight: "bold",
                 padding: "10px 20px",
                 "&:hover": {
-                  backgroundColor: "#A0C8A0", // Lite mörkare grön vid hover
+                  backgroundColor: "#A0C8A0",
                 },
               }}
             >
@@ -122,13 +122,13 @@ export default function MenuSection() {
             <Button
               variant="contained"
               sx={{
-                backgroundColor: "#B2D8B2", // Ljusgrön knapp
-                color: "#2E8B57", // Mörkgrön text
+                backgroundColor: "#B2D8B2",
+                color: "#2E8B57",
                 fontFamily: "'Montserrat', sans-serif",
                 fontWeight: "bold",
                 padding: "10px 20px",
                 "&:hover": {
-                  backgroundColor: "#A0C8A0", // Lite mörkare grön vid hover
+                  backgroundColor: "#A0C8A0",
                 },
               }}
             >
@@ -139,13 +139,13 @@ export default function MenuSection() {
             <Button
               variant="contained"
               sx={{
-                backgroundColor: "#B2D8B2", // Ljusgrön knapp
-                color: "#2E8B57", // Mörkgrön text
+                backgroundColor: "#B2D8B2",
+                color: "#2E8B57",
                 fontFamily: "'Montserrat', sans-serif",
                 fontWeight: "bold",
                 padding: "10px 20px",
                 "&:hover": {
-                  backgroundColor: "#A0C8A0", // Lite mörkare grön vid hover
+                  backgroundColor: "#A0C8A0",
                 },
               }}
             >
@@ -156,13 +156,13 @@ export default function MenuSection() {
             <Button
               variant="contained"
               sx={{
-                backgroundColor: "#B2D8B2", // Ljusgrön knapp
-                color: "#2E8B57", // Mörkgrön text
+                backgroundColor: "#B2D8B2",
+                color: "#2E8B57",
                 fontFamily: "'Montserrat', sans-serif",
                 fontWeight: "bold",
                 padding: "10px 20px",
                 "&:hover": {
-                  backgroundColor: "#A0C8A0", // Lite mörkare grön vid hover
+                  backgroundColor: "#A0C8A0",
                 },
               }}
             >
@@ -176,12 +176,12 @@ export default function MenuSection() {
           position: isSticky ? "fixed" : "relative",
           top: isSticky ? 0 : "auto",
           width: "100%",
-          backgroundColor: "#F5F5DC", // Samma bakgrund för att förhindra hoppning
-          color: "#2E8B57", // Mörkgrön text
+          backgroundColor: "#F5F5DC",
+          color: "#2E8B57",
           textAlign: "center",
           padding: isSticky ? "10px 0" : 0,
-          zIndex: isSticky ? 999 : 1, // Prioritet när sticky
-          boxShadow: isSticky ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none", // Liten skugga när sticky
+          zIndex: isSticky ? 999 : 1,
+          boxShadow: isSticky ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",
           transition: "all 0.3s ease-in-out",
         }}
       >
