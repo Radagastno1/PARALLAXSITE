@@ -36,7 +36,7 @@ export default function WebsitePresentation() {
         minHeight: "100vh",
         textAlign: "center",
         overflow: "hidden",
-        background: "linear-gradient(135deg, #DAD3BE 0%, #DAD3BE 100%)",
+        background: "#F5F5DC",
         padding: 4,
       }}
     >
@@ -111,14 +111,17 @@ export default function WebsitePresentation() {
             </Box>
           </AnimatedBox>
           <Button
+            variant="contained"
             sx={{
-              backgroundColor: "#EDE9DC",
-              color: "#6B8A7A",
+              backgroundColor: "#B2D8B2",
+              color: "#2E8B57",
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: "bold",
+              padding: "10px 20px",
               "&:hover": {
-                backgroundColor: "#DAD3BE",
+                backgroundColor: "#A0C8A0",
               },
             }}
-            variant="contained"
           >
             Läs mer
           </Button>
@@ -168,14 +171,17 @@ export default function WebsitePresentation() {
             </Box>
           </AnimatedBox>
           <Button
+            variant="contained"
             sx={{
-              backgroundColor: "#EDE9DC",
-              color: "#254336",
+              backgroundColor: "#B2D8B2",
+              color: "#2E8B57",
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: "bold",
+              padding: "10px 20px",
               "&:hover": {
-                backgroundColor: "#DAD3BE",
+                backgroundColor: "#A0C8A0",
               },
             }}
-            variant="contained"
           >
             Läs mer
           </Button>
@@ -226,14 +232,17 @@ export default function WebsitePresentation() {
             </Box>
           </AnimatedBox>
           <Button
+            variant="contained"
             sx={{
-              backgroundColor: "#EDE9DC",
-              color: "#254336",
+              backgroundColor: "#B2D8B2",
+              color: "#2E8B57",
+              fontFamily: "'Montserrat', sans-serif",
+              fontWeight: "bold",
+              padding: "10px 20px",
               "&:hover": {
-                backgroundColor: "#DAD3BE",
+                backgroundColor: "#A0C8A0",
               },
             }}
-            variant="contained"
           >
             Läs mer
           </Button>

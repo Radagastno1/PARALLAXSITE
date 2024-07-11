@@ -1,6 +1,7 @@
 import { Box, Typography, Button, Grid } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function MenuSection() {
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -48,6 +49,7 @@ export default function MenuSection() {
       }
     };
   }, [controls]);
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -103,6 +105,9 @@ export default function MenuSection() {
         <Grid container spacing={4} justifyContent="center">
           <Grid item>
             <Button
+              onClick={() => {
+                navigate("/");
+              }}
               variant="contained"
               sx={{
                 backgroundColor: "#B2D8B2",
@@ -121,6 +126,9 @@ export default function MenuSection() {
           <Grid item>
             <Button
               variant="contained"
+              onClick={() => {
+                navigate("/about");
+              }}
               sx={{
                 backgroundColor: "#B2D8B2",
                 color: "#2E8B57",
@@ -138,6 +146,9 @@ export default function MenuSection() {
           <Grid item>
             <Button
               variant="contained"
+              onClick={() => {
+                navigate("/ourflowers");
+              }}
               sx={{
                 backgroundColor: "#B2D8B2",
                 color: "#2E8B57",
@@ -154,6 +165,9 @@ export default function MenuSection() {
           </Grid>
           <Grid item>
             <Button
+              onClick={() => {
+                navigate("/contact");
+              }}
               variant="contained"
               sx={{
                 backgroundColor: "#B2D8B2",
@@ -189,6 +203,9 @@ export default function MenuSection() {
           <Grid item>
             <Button
               variant="text"
+              onClick={() => {
+                navigate("/");
+              }}
               sx={{
                 color: "#2E8B57",
                 fontFamily: "'Montserrat', sans-serif",
@@ -203,6 +220,9 @@ export default function MenuSection() {
           </Grid>
           <Grid item>
             <Button
+              onClick={() => {
+                navigate("/about");
+              }}
               variant="text"
               sx={{
                 color: "#2E8B57",
@@ -218,6 +238,9 @@ export default function MenuSection() {
           </Grid>
           <Grid item>
             <Button
+              onClick={() => {
+                navigate("/ourflowers");
+              }}
               variant="text"
               sx={{
                 color: "#2E8B57",
@@ -234,6 +257,9 @@ export default function MenuSection() {
           <Grid item>
             <Button
               variant="text"
+              onClick={() => {
+                navigate("/contact");
+              }}
               sx={{
                 color: "#2E8B57",
                 fontFamily: "'Montserrat', sans-serif",

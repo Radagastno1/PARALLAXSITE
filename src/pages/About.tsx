@@ -1,5 +1,6 @@
-import { Box, Typography, keyframes } from "@mui/material";
-import { FormattedMessage } from "react-intl";
+import { Box, Button, Grid, Typography, keyframes } from "@mui/material";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const fadeIn = keyframes`
   from {
@@ -12,88 +13,168 @@ const fadeIn = keyframes`
   }
 `;
 
+const AnimatedBox = motion(Box);
+
 export default function AboutUs() {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
-        padding: 0,
-        margin: 0,
-        width: "100%",
         alignItems: "center",
         justifyContent: "center",
-        flexGrow: 1,
         minHeight: "100vh",
-        zIndex: 1,
-        animation: `${fadeIn} 1s ease-out`,
+        // background: "linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)",
+        padding: 4,
       }}
     >
+      <Box
+        sx={{
+          position: "fixed",
+          top: 0,
+          width: "100%",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          color: "#254336",
+          textAlign: "center",
+          padding: "10px 0",
+          zIndex: 999,
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          transition: "all 0.3s ease-in-out",
+        }}
+      >
+        <Grid container spacing={2} justifyContent="center">
+          <Grid item>
+            <Button
+              variant="text"
+              onClick={() => {
+                navigate("/");
+              }}
+              sx={{
+                color: "#254336",
+                fontFamily: "'Montserrat', sans-serif",
+                fontWeight: "bold",
+                "&:hover": {
+                  color: "#6B8A7A",
+                },
+              }}
+            >
+              Hem
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              onClick={() => {
+                navigate("/about");
+              }}
+              variant="text"
+              sx={{
+                color: "#254336",
+                fontFamily: "'Montserrat', sans-serif",
+                fontWeight: "bold",
+                "&:hover": {
+                  color: "#6B8A7A",
+                },
+              }}
+            >
+              Om Oss
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="text"
+              onClick={() => {
+                navigate("/ourflowers");
+              }}
+              sx={{
+                color: "#254336",
+                fontFamily: "'Montserrat', sans-serif",
+                fontWeight: "bold",
+                "&:hover": {
+                  color: "#6B8A7A",
+                },
+              }}
+            >
+              Våra Blommor
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              onClick={() => {
+                navigate("/contact");
+              }}
+              variant="text"
+              sx={{
+                color: "#254336",
+                fontFamily: "'Montserrat', sans-serif",
+                fontWeight: "bold",
+                "&:hover": {
+                  color: "#6B8A7A",
+                },
+              }}
+            >
+              Kontakt
+            </Button>
+          </Grid>
+        </Grid>
+      </Box>
+
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          backgroundColor: "rgba(0, 0, 0, 0.7)",
-          borderRadius: 8,
-          padding: 4,
-          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)",
-          maxWidth: "80%",
+          maxWidth: "800px",
           margin: "auto",
-          animation: `${fadeIn} 1s ease-out`,
-          animationDelay: "0.5s",
-          animationFillMode: "forwards",
-          opacity: 0,
+          padding: 4,
         }}
       >
-        <Box
+        <AnimatedBox
           sx={{
             width: "100%",
             marginBottom: 2,
-            marginLeft: { xs: 0, md: 10 },
-            display: "flex",
-            flexDirection: "column",
-            alignItems: { xs: "center", md: "start" },
+            animation: `${fadeIn} 1s ease-out`,
           }}
         >
           <Typography
             variant="h2"
             sx={{
-              color: "white",
+              color: "#254336",
               letterSpacing: 3,
-              marginBottom: { xs: 2, md: 1 },
+              marginBottom: { xs: 2, md: 3 },
               fontWeight: "300",
               fontSize: { xs: 35, md: 50 },
-              textAlign: { xs: "center", md: "start" },
+              textAlign: "center",
             }}
           >
-            <FormattedMessage id="about" />
+            Om Oss
           </Typography>
-          <div
-            style={{
-              height: 2,
-              width: 120,
-              backgroundColor: "#896daf",
-              marginBottom: 1,
-            }}
-          />
-        </Box>
+        </AnimatedBox>
 
         <Box
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
+            gap: 4,
+            animation: `${fadeIn} 1s ease-out`,
+            animationDelay: "0.5s",
           }}
         >
-          <Box sx={{ flex: 1, padding: 2, textAlign: "center" }}>
+          <Box
+            sx={{
+              flex: 1,
+              padding: 2,
+              textAlign: "center",
+            }}
+          >
             <img
-              src={"https://i.imgur.com/9BMENE8.jpeg"}
+              src="https://i.imgur.com/FNo0BUN.jpeg"
               alt="Team"
               style={{
                 width: "100%",
                 borderRadius: 8,
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
+                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
                 transition: "transform 0.3s ease",
               }}
               onMouseEnter={(e) =>
@@ -114,42 +195,27 @@ export default function AboutUs() {
             <Typography
               variant="h4"
               sx={{
-                color: "white",
+                color: "#254336",
                 letterSpacing: 1.5,
                 fontWeight: "bold",
-                display: "inline",
+                marginBottom: 2,
               }}
             >
-              <FormattedMessage id="our-team" />
-            </Typography>
-            <Typography
-              variant="h4"
-              sx={{
-                color: "#896daf",
-                marginLeft: 1,
-                letterSpacing: 1.5,
-                fontWeight: "bold",
-                display: "inline",
-              }}
-            >
-              <FormattedMessage id="developers" />
+              Vi är en liten och personlig blomsterhandel med fokus på att skapa
+              glädje
             </Typography>
             <Typography
               variant="body1"
-              sx={{ marginTop: 2, lineHeight: 1.8, color: "white" }}
-            >
-              <FormattedMessage id="we-focus" />
-            </Typography>
-            <Typography
-              variant="h5"
               sx={{
-                marginTop: 3,
-                color: "#896daf",
-                fontWeight: "bold",
-                textAlign: { xs: "center", md: "left" },
+                lineHeight: 1.8,
+                color: "#4F4F4F",
               }}
             >
-              - Angelina & Elina
+              Vi har många års erfarenhet och älskar att arbeta med blommor.
+              Vårt team består av kunniga och passionerade florister som alltid
+              strävar efter att överträffa dina förväntningar. Oavsett om du
+              behöver blommor för bröllop, begravningar, fester eller bara för
+              att lysa upp din vardag, finns vi här för att hjälpa dig.
             </Typography>
           </Box>
         </Box>

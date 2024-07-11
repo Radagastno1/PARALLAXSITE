@@ -76,23 +76,6 @@ export default function AboutUsIndex() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <Typography
-            sx={{
-              fontSize: { xs: 36, md: 48 },
-              fontWeight: "bold",
-              marginBottom: 2,
-              letterSpacing: 1,
-            }}
-          >
-            Om oss
-          </Typography>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
           <Typography
