@@ -1,7 +1,8 @@
-import { Box, Typography, Button, Grid } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import StickyHeader from "./StickyHeader";
 
 export default function MenuSection() {
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -185,95 +186,7 @@ export default function MenuSection() {
           </Grid>
         </Grid>
       </Box>
-      <Box
-        sx={{
-          position: isSticky ? "fixed" : "relative",
-          top: isSticky ? 0 : "auto",
-          width: "100%",
-          backgroundColor: "#F5F5DC",
-          color: "#2E8B57",
-          textAlign: "center",
-          padding: isSticky ? "10px 0" : 0,
-          zIndex: isSticky ? 999 : 1,
-          boxShadow: isSticky ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",
-          transition: "all 0.3s ease-in-out",
-        }}
-      >
-        <Grid container spacing={2} justifyContent="center">
-          <Grid item>
-            <Button
-              variant="text"
-              onClick={() => {
-                navigate("/");
-              }}
-              sx={{
-                color: "#2E8B57",
-                fontFamily: "'Montserrat', sans-serif",
-                fontWeight: "bold",
-                "&:hover": {
-                  color: "#A0C8A0",
-                },
-              }}
-            >
-              Hem
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              onClick={() => {
-                navigate("/about");
-              }}
-              variant="text"
-              sx={{
-                color: "#2E8B57",
-                fontFamily: "'Montserrat', sans-serif",
-                fontWeight: "bold",
-                "&:hover": {
-                  color: "#A0C8A0",
-                },
-              }}
-            >
-              Om Oss
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              onClick={() => {
-                navigate("/ourflowers");
-              }}
-              variant="text"
-              sx={{
-                color: "#2E8B57",
-                fontFamily: "'Montserrat', sans-serif",
-                fontWeight: "bold",
-                "&:hover": {
-                  color: "#A0C8A0",
-                },
-              }}
-            >
-              Våra Blommor
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button
-              variant="text"
-              onClick={() => {
-                navigate("/contact");
-              }}
-              sx={{
-                color: "#2E8B57",
-                fontFamily: "'Montserrat', sans-serif",
-                fontWeight: "bold",
-                "&:hover": {
-                  color: "#A0C8A0",
-                },
-              }}
-            >
-              Kontakt
-            </Button>
-          </Grid>
-        </Grid>
-      </Box>
+      <StickyHeader isSticky={isSticky} />
     </Box>
   );
 }

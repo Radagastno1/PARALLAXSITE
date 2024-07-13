@@ -1,17 +1,8 @@
-import { Box, Grid, Typography, keyframes } from "@mui/material";
-import { motion } from "framer-motion";
-import { FormattedMessage } from "react-intl";
+import { Box, Typography, Link } from "@mui/material";
+import StickyHeader from "../components.tsx/StickyHeader";
 
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+const waveSvg = `https://i.imgur.com/sRKOmS8.png`;
+const iconSvg = `data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiMyNTQzMzYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDIuMjc4bDcuMTQ1IDcuMTQ1YTIgMiAwIDAwLTIuODI4IDIuODI4TDExLjI3OCA1LjE1NiAzLjY4IDIyLjMyNkwyMC4zMjggMy42OEwxMiAxMiAwbDcuMTQ1LTcuMTQ1eiIvPjwvc3ZnPg==`;
 
 export default function Contact() {
   return (
@@ -19,121 +10,107 @@ export default function Contact() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        padding: 0,
-        margin: 0,
-        width: "100%",
-        alignItems: "center",
-        marginTop: 2,
-        flexGrow: 1,
         minHeight: "100vh",
-        zIndex: 1,
+        width: "100%",
       }}
     >
-      <Grid
-        container
-        item
-        xs={10}
-        md={8}
-        lg={6}
-        justifyContent="center"
-        alignItems="center"
+      <StickyHeader isSticky={true} />
+
+      <Box
         sx={{
-          flexDirection: "row",
-          marginBottom: 4,
-          minWidth: { xs: "100%", md: "90%" },
-          marginLeft: { xs: 0, md: 20 },
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+          minHeight: "100vh",
+          marginTop: 7,
+          position: "relative",
+          overflow: "hidden",
+          // backgroundColor: "#F5F5DC",
         }}
       >
-        <Grid
-          item
-          xs={12}
-          md={6}
+        <Box
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: { xs: "center", md: "start" },
-            flex: 1,
+            position: "absolute",
+            top: 0,
+            left: 0,
             width: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-            borderRadius: 2,
-            padding: 4,
-            boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)",
-            maxWidth: "100%",
-            margin: "auto",
-            animation: `${fadeIn} 1s ease-out`,
-            animationDelay: "0.5s",
-            animationFillMode: "forwards",
-            opacity: 0,
+            height: "100%",
+            backgroundImage: `url(${waveSvg})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            zIndex: 1,
+          }}
+        />
+
+        <Box
+          sx={{
+            position: "absolute",
+            top: "40%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: 2,
           }}
         >
-          <Typography
-            variant="h2"
-            sx={{
-              color: "white",
-              letterSpacing: 3,
-              marginBottom: { xs: 2, md: 1 },
-              fontWeight: "300",
-              fontSize: { xs: 35, md: 50 },
-              textAlign: { xs: "center", md: "start" },
-            }}
-          >
-            <FormattedMessage id="tell-us" />
-          </Typography>
-          <div
-            style={{
-              height: 2,
-              width: 250,
-              backgroundColor: "#896daf",
-              marginBottom: 1,
-            }}
-          />
-          <Typography
-            variant="body1"
-            sx={{
-              color: "white",
-              letterSpacing: 2,
-              marginY: { xs: 2, md: 1 },
-              fontWeight: "300",
-              textAlign: { xs: "center", md: "start" },
-            }}
-          >
-            <FormattedMessage id="we-assist" />
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              color: "white",
-              letterSpacing: 2,
-              marginBottom: 1,
-              fontWeight: "300",
-              textAlign: { xs: "center", md: "start" },
-            }}
-          >
-            <FormattedMessage id="tell-us-2" />
-          </Typography>
-        </Grid>
+          <img src={iconSvg} alt="Icon" style={{ width: 100, height: 100 }} />
+        </Box>
 
-        <Grid
-          item
-          xs={12}
-          md={6}
+        <Box
           sx={{
             display: "flex",
-            justifyContent: { xs: "center", md: "start" },
-            alignItems: { xs: "center", md: "start" },
+            flex: 1,
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+            zIndex: 2,
+            padding: 3,
           }}
         >
-          <motion.img
-            src="https://i.imgur.com/LWnnKCt.png"
-            alt="lightbulb"
-            height="300px"
-            width="300px"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          />
-        </Grid>
-      </Grid>
+          <Box
+            sx={{
+              backgroundColor: "#DAD3BE",
+              borderRadius: 1,
+              boxShadow: "rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+              padding: 4,
+              zIndex: 2,
+              textAlign: "center",
+              maxWidth: 600,
+              width: "100%",
+            }}
+          >
+            <Typography variant="h4" color="#254336" mb={2}>
+              Kontakta oss
+            </Typography>
+            <Typography variant="body1" color="#254336" mb={1}>
+              Telefon:{" "}
+              <Link href="tel:+123456789" color="#254336">
+                123-456-789
+              </Link>
+            </Typography>
+            <Typography variant="body1" color="#254336" mb={2}>
+              Email:{" "}
+              <Link href="mailto:info@example.com" color="#254336">
+                info@example.com
+              </Link>
+            </Typography>
+            <Typography variant="body2" color="#254336">
+              Följ oss på sociala medier för de senaste uppdateringarna och
+              erbjudandena!
+            </Typography>
+          </Box>
+        </Box>
+
+        <Box
+          sx={{
+            // height: 300,
+            width: "100%",
+            position: "absolute",
+            bottom: 0,
+            // backgroundColor: "#254336",
+            // zIndex: 1,
+          }}
+        />
+      </Box>
     </Box>
   );
 }

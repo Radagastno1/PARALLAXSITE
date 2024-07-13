@@ -36,22 +36,36 @@ export default function WebsitePresentation() {
         minHeight: "100vh",
         textAlign: "center",
         overflow: "hidden",
-        background: "#F5F5DC",
         padding: 4,
+        color: "#254336",
       }}
     >
-      <Box
-        sx={{
-          position: "fixed",
+      <video
+        autoPlay
+        loop
+        muted
+        src="https://i.imgur.com/fCfHGhd.mp4"
+        style={{
+          position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
-          height: "100vh",
-          backgroundAttachment: "fixed",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          filter: "brightness(0.5)",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: -1,
+        }}
+      />
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+
+          brightness: "120%",
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(255, 255, 255, 0.4)",
+          zIndex: -1,
         }}
       />
 
@@ -72,7 +86,6 @@ export default function WebsitePresentation() {
             maxWidth: "800px",
             padding: 4,
             textAlign: "left",
-            color: "#254336",
           }}
         >
           <AnimatedBox>
@@ -81,7 +94,7 @@ export default function WebsitePresentation() {
                 fontSize: { xs: 24, md: 40 },
                 marginBottom: 2,
                 letterSpacing: 2,
-                color: "#254336",
+                fontWeight: 500,
               }}
             >
               <FontAwesomeIcon icon={faLeaf} style={{ marginRight: 8 }} />
@@ -96,18 +109,13 @@ export default function WebsitePresentation() {
                 display: "flex",
                 flexDirection: "column",
                 gap: 1,
+                fontWeight: 500,
               }}
             >
-              <Typography sx={{ color: "#254336" }}>Bröllopsblommor</Typography>
-              <Typography sx={{ color: "#254336" }}>
-                Begravningsarrangemang
-              </Typography>
-              <Typography sx={{ color: "#254336" }}>
-                Fest- och eventblommor
-              </Typography>
-              <Typography sx={{ color: "#254336" }}>
-                Färdiga buketter
-              </Typography>
+              <Typography>Bröllopsblommor</Typography>
+              <Typography>Begravningsarrangemang</Typography>
+              <Typography>Fest- och eventblommor</Typography>
+              <Typography>Färdiga buketter</Typography>
             </Box>
           </AnimatedBox>
           <Button
@@ -134,7 +142,6 @@ export default function WebsitePresentation() {
             maxWidth: "800px",
             padding: 4,
             textAlign: "left",
-            color: "#254336",
           }}
         >
           <AnimatedBox>
@@ -143,7 +150,7 @@ export default function WebsitePresentation() {
                 fontSize: { xs: 24, md: 40 },
                 marginBottom: 2,
                 letterSpacing: 2,
-                color: "#254336",
+                fontWeight: 500,
               }}
             >
               <FontAwesomeIcon
@@ -163,11 +170,9 @@ export default function WebsitePresentation() {
                 gap: 1,
               }}
             >
-              <Typography sx={{ color: "#254336" }}>Inomhusväxter</Typography>
-              <Typography sx={{ color: "#254336" }}>Utomhusväxter</Typography>
-              <Typography sx={{ color: "#254336" }}>
-                Krukor och planteringskärl
-              </Typography>
+              <Typography>Inomhusväxter</Typography>
+              <Typography>Utomhusväxter</Typography>
+              <Typography>Krukor och planteringskärl</Typography>
             </Box>
           </AnimatedBox>
           <Button
@@ -194,7 +199,6 @@ export default function WebsitePresentation() {
             maxWidth: "800px",
             padding: 4,
             textAlign: "left",
-            color: "#254336",
           }}
         >
           <AnimatedBox>
@@ -203,7 +207,7 @@ export default function WebsitePresentation() {
                 fontSize: { xs: 24, md: 40 },
                 marginBottom: 2,
                 letterSpacing: 2,
-                color: "#254336",
+                fontWeight: 500,
               }}
             >
               <FontAwesomeIcon icon={faTruck} style={{ marginRight: 8 }} />
@@ -220,13 +224,9 @@ export default function WebsitePresentation() {
                 gap: 1,
               }}
             >
-              <Typography sx={{ color: "#254336" }}>
-                Hemleverans inom Stockholm
-              </Typography>
-              <Typography sx={{ color: "#254336" }}>
-                Expressleverans samma dag
-              </Typography>
-              <Typography sx={{ color: "#254336" }}>
+              <Typography>Hemleverans inom Stockholm</Typography>
+              <Typography>Expressleverans samma dag</Typography>
+              <Typography>
                 Blomsterabonnemang för regelbunden leverans
               </Typography>
             </Box>

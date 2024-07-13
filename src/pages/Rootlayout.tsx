@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components.tsx/Footer";
+import ScrollToTop from "../components.tsx/ScrollToTop";
 const RootLayout = () => {
   return (
     <div
@@ -37,6 +38,7 @@ const RootLayout = () => {
           alignItems: "center",
         }}
       >
+        <ScrollToTop />
         <Outlet />
       </main>
 
